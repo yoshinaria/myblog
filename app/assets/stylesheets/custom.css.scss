@@ -2,13 +2,18 @@ $brown: #705C5D;
 $grey: #7F6B5D;
 $opensuns: 'Open Sans', sans-serif;
 
-
+a {
+    color: grey;
+    text-decoration: none;
+    :hover {
+        color: white;
+    }
+}
 body {
-    padding-top: 10px;
+    padding-top: 50px;
     font-family: 'Lora', serif;
     font-size: 1.6em;
     line-height: 2em;
-    
 }
 
 #header {
@@ -22,6 +27,7 @@ body {
 
 .navbar-brand, nav {
     color: white;
+    text-decoration: none;
 }
 
 .page-header {
@@ -30,7 +36,7 @@ body {
         color: $grey;
         font-weight: bold;
         font-size: 3em;
-        padding-top: 30px;
+        padding-top: 10px;
         padding-bottom: 50px;
         line-height: 1em;
     }
