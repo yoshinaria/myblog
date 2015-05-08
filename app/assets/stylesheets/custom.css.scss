@@ -1,0 +1,55 @@
+$brown: #705C5D;
+$grey: #7F6B5D;
+$opensuns: 'Open Sans', sans-serif;
+
+
+body {
+    padding-top: 50px;
+    font-family: 'Lora', serif;
+    font-size: 1.6em;
+    line-height: 2em;
+    
+}
+
+#header {
+   font-family: $opensuns;
+   font-weight: 300;
+}
+
+.blog-num {
+    color: grey;
+}
+
+.navbar-brand, nav {
+    color: white;
+}
+
+.page-header {
+    padding: 0;
+    .title {
+        color: $grey;
+        font-weight: bold;
+        font-size: 3em;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        line-height: 1em;
+    }
+}
+
+.footer {
+    font-family: $opensuns;
+    background-color: rgba(0,0,0,0.5);
+    border:0 #e7e7e7 solid;
+    border-top-width:1px;
+    bottom:0;
+    position:fixed;
+    padding:10px;
+    height:40px;
+    width:100%;
+    
+    a {
+        margin-left: 10px;
+        color: white;
+    }
+}
+
