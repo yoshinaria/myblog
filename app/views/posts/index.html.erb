@@ -1,20 +1,13 @@
-<%= render "shared/header" %>
-
 <div id="wrapper">
   <!--flash message -->
-
- 
 
 
       <div id="main-wrapper" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-
         <% @posts.each do |post| %>
               <div class="page-header col-xs-12">
                   <div class="blog-num">Blog NO.<%= post.id %> - <%= post.created_at.strftime("%d %b %y") %></div>
-                  <div class="title"><%= post.title %></div>
+                  <div class="title"><%= link_to post.title, post_path(post) %></div>
               </div>
               <section>
                 <p><i>Author: Akiko T.</i></p>
@@ -22,7 +15,8 @@
               <br>
               <hr>
         <% end %>
-                
+        
+          
                  
         </div>
     
@@ -30,3 +24,4 @@
            <div class="nav navbar-nav"><a href="">Twitter</a><a href="">Linkedin</a><a href="">Github</a></div>
         </div>
 </div>
+ 

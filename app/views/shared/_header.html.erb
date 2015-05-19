@@ -14,13 +14,39 @@
     <div class="collapse navbar-collapse pull-right" id="login">
       
         <ul class="nav navbar-nav ">
+          <li>
+            <%= link_to new_post_path do %>
+            <i class="glyphicon glyphicon-plus-sign"></i>
+            New Post
+            <% end %>
+          </li>
              <% if user_signed_in? %>
-               <li class="user_signed_in"> Signed in as <%= current_user.email %>. Not you? <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+               <li class="user_signed_in"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
               <% else %>
                <li><%= link_to "Sign up", new_user_registration_path %></li>
                <li><%= link_to "Login", new_user_session_path %></li>
                <% end %>
         </ul>
+      
+
 
     </div>
 </div>
+<div class="col-xs-12 col-sm-8 col-sm-offset-2">
+  <% if notice.present? %>
+    <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= notice %>
+  </div>
+  
+<% end %>
+<% if alert.present? %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <%= alert %>
+  </div>
+<% end %>
+</div>
+
+
+

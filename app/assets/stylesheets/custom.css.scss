@@ -3,10 +3,10 @@ $grey: #7F6B5D;
 $opensuns: 'Open Sans', sans-serif;
 
 a {
-    color: grey;
+    color: $brown;
     text-decoration: none;
     :hover {
-        color: white;
+        color: $grey;
     }
 }
 body {
